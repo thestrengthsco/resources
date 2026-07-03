@@ -1,15 +1,16 @@
 ---
-name: email-reply-digest
+name: email-summary
 description: >-
-  Generate Shu Yi's "Email Reply Digest" — the emails that still genuinely need
-  HER reply, each with a ready-to-paste draft. Use when the user asks for their
-  email digest, reply digest, "what emails do I need to reply to", inbox triage,
-  "who am I waiting on", or to catch up on outstanding client/prospect replies.
-  Works over the connected Outlook mailbox shuyi@thestrengthsco.com (The Strengths
-  Co — a CliftonStrengths coaching/workshop consultancy).
+  Generate Shu Yi's email summary / "Email Reply Digest" — the emails that still
+  genuinely need HER reply, each with a ready-to-paste draft. Use when the user
+  asks for their email summary, email digest, reply digest, "summarise my emails",
+  "what emails do I need to reply to", inbox triage, "who am I waiting on", or to
+  catch up on outstanding client/prospect replies. Works over the connected Outlook
+  mailbox shuyi@thestrengthsco.com (The Strengths Co — a CliftonStrengths
+  coaching/workshop consultancy).
 ---
 
-# Email Reply Digest
+# Email Summary (Reply Digest)
 
 Produce a tight, skimmable digest of the emails Shu Yi still needs to reply to,
 each with a ready-to-paste draft. Deliver it **in chat** — do NOT create a file
@@ -28,9 +29,9 @@ authenticated connectors; the fix is to reconnect Microsoft 365.)
 
 ## Steps
 
-1. **Pull the inbox.** Search `folderName: "Inbox"`, `afterDateTime` = 14 days ago,
-   `order: "newest"`, and **page through ALL results** (usually 150+ — keep
-   fetching with increasing `offset` until you've covered `totalResultCount`).
+1. **Pull the inbox.** Search `folderName: "Inbox"`, `afterDateTime` = 3 days ago,
+   `order: "newest"`, and **page through ALL results** (keep fetching with
+   increasing `offset` until you've covered `totalResultCount`).
 
 2. **Keep only what genuinely needs my reply:**
    - (a) Direct asks / questions / requests addressed to me, and
@@ -43,7 +44,8 @@ authenticated connectors; the fix is to reconnect Microsoft 365.)
      **not** replied to are **high priority**.
 
 3. **Remove already-answered threads.** Search `folderName: "Sent Items"`, last
-   ~14 days. **Drop any thread where my most recent message is the latest** in the
+   ~5 days (a little wider than the inbox window to reliably catch my replies).
+   **Drop any thread where my most recent message is the latest** in the
    conversation (ball is in their court). Keep only threads where the **other
    person's message is the latest** and needs a response from me. This is the most
    important filter — Shu Yi is usually on top of her inbox, so most active client
