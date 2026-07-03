@@ -71,6 +71,11 @@ authenticated connectors; the fix is to reconnect Microsoft 365.)
 
 ## Output (in chat — tight and skimmable)
 
+Address Shu Yi directly as **"you"/"your"** throughout the digest — she's the one
+reading it. Never refer to her in the third person (not "Shu Yi sent a proposal",
+say "you sent a proposal"). Third person is fine only *inside a draft reply*,
+where "Shu Yi" is the signer writing to someone else.
+
 - **Bottom line:** one line — how many truly need a reply; note if the inbox is
   mostly noise.
 - **🔴 Needs a reply — act today:** highest priority (unanswered leads/client asks).
@@ -78,8 +83,8 @@ authenticated connectors; the fix is to reconnect Microsoft 365.)
   any calendar conflict, why it matters, and a ready-to-paste **draft reply**.
 - **🟡 Optional — lower urgency:** nice-to-reply items (e.g. warm leads gone quiet →
   a follow-up nudge; community favours).
-- **✅ Already handled — no action:** brief list of active client threads I've
-  already replied to (so I know they were checked), noting who I'm waiting on.
+- **✅ Already handled — no action:** brief list of active client threads you've
+  already replied to (so you know they were checked), noting who you're waiting on.
 
 ## Draft voice
 
