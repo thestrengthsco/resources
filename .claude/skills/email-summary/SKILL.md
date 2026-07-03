@@ -101,8 +101,19 @@ signature:
 > P: +65 94779865
 > W: www.thestrengthsco.com
 
+## Delivery
+
+After posting the digest in chat, also send it to Slack via `slack_send_message`
+(Shoey bot) as a **DM to Shu Yi herself** — `channel_id: "U0827GXF9PF"`. Send this
+every time the skill runs (manual or scheduled), even when nothing is actionable —
+a short "inbox is clear" line is fine in that case. Use the same "you"/"your"
+voice as the chat output. Slack formatting is markdown — keep it tight (bottom
+line + 🔴/🟡 sections; the ✅ "already handled" list can be trimmed to just names
+if long, since the full detail is already in chat).
+
 ## Notes
 
 - A daily version of this runs as a scheduled routine ("Daily Email Reply Digest",
-  8:00 AM SGT, push notification). This skill is the same workflow on demand.
+  8:00 AM SGT, push notification + Slack DM via Shoey bot). This skill is the same
+  workflow on demand.
 - Keep the output in chat by default. Only write a file if the user explicitly asks.
