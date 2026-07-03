@@ -29,7 +29,7 @@ authenticated connectors; the fix is to reconnect Microsoft 365.)
 
 ## Steps
 
-1. **Pull the inbox.** Search `folderName: "Inbox"`, `afterDateTime` = 3 days ago,
+1. **Pull the inbox.** Search `folderName: "Inbox"`, `afterDateTime` = 5 days ago,
    `order: "newest"`, and **page through ALL results** (keep fetching with
    increasing `offset` until you've covered `totalResultCount`).
 
@@ -44,7 +44,7 @@ authenticated connectors; the fix is to reconnect Microsoft 365.)
      **not** replied to are **high priority**.
 
 3. **Remove already-answered threads.** Search `folderName: "Sent Items"`, last
-   ~5 days (a little wider than the inbox window to reliably catch my replies).
+   ~7 days (a little wider than the inbox window to reliably catch my replies).
    **Drop any thread where my most recent message is the latest** in the
    conversation (ball is in their court). Keep only threads where the **other
    person's message is the latest** and needs a response from me. This is the most
