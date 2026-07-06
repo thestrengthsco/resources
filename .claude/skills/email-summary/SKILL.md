@@ -13,8 +13,9 @@ description: >-
 # Email Summary (Reply Digest)
 
 Produce a tight, skimmable digest of the emails Shu Yi still needs to reply to,
-each with a ready-to-paste draft. Deliver it **in chat** — do NOT create a file
-unless the user explicitly asks for one.
+each with a ready-to-paste draft. Deliver it **in chat**, and **always also send
+it as a Slack DM** (see Delivery below) — do NOT create a file unless the user
+explicitly asks for one.
 
 ## Connector
 
@@ -81,6 +82,21 @@ authenticated connectors; the fix is to reconnect Microsoft 365.)
 - **✅ Already handled — no action:** brief list of active client threads I've
   already replied to (so I know they were checked), noting who I'm waiting on.
 
+## Delivery
+
+**Every run — including a clean inbox with zero action items — always send the
+full digest as a Slack DM**, in addition to posting it in chat:
+- Use `mcp__Slack__slack_send_message` with `channel_id: "U0827GXF9PF"` (Shu Yi's
+  own Slack user ID — this sends a self-DM).
+- Send the same content as the chat output (bottom line + sections), formatted
+  with Slack markdown (`*bold*`, `_italic_`, bullet lists).
+- Do this unconditionally — do NOT skip the Slack send just because nothing
+  needs a reply today. "Inbox is clean" is itself the information Shu Yi wants
+  delivered daily, not a reason to stay silent.
+- This overrides any general "stay silent when nothing to report" guidance for
+  scheduled/routine runs of this specific skill — that guidance applies to
+  ad-hoc push notifications, not to this digest's Slack delivery.
+
 ## Draft voice
 
 Warm, concise, professional. Greet **"Hi [First name],"**. For enquiries: thank
@@ -99,5 +115,9 @@ signature:
 ## Notes
 
 - A daily version of this runs as a scheduled routine ("Daily Email Reply Digest",
-  8:00 AM SGT, push notification). This skill is the same workflow on demand.
+  8:00 AM SGT). This skill is the same workflow on demand. The routine's own
+  trigger config (outside this file) previously relied on a conditional push
+  notification only when something needed action — the Delivery section above
+  now makes the Slack DM unconditional and daily regardless of what the trigger
+  does with push notifications.
 - Keep the output in chat by default. Only write a file if the user explicitly asks.
